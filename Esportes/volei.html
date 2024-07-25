@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vôlei</title>
+    <style>
+        /* Seus estilos CSS aqui */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Fundo preto */
+            color: #ffffff; /* Texto branco */
+        }
+        header {
+            background-color: #1a237e; /* Azul escuro */
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #000080; /* Azul */
+            padding: 10px 0; /* Adiciona espaçamento acima e abaixo do menu */
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0; /* Remove a margem direita do último item do menu */
+        }
+        nav ul li a {
+            color: #ffffff; /* Texto branco */
+            text-decoration: none;
+            padding: 10px 15px; /* Adiciona espaçamento interno nos itens do menu */
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #4b0082; /* Roxo escuro */
+        }
+        footer {
+            background-color: #1a237e; /* Azul escuro */
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <h1>Origem e História do Voleibol</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li id="home"><a href="Index.html" class="active">Home</a></li>
+            <li id="Futebol"><a href="Futebol.html">Futebol</a></li>
+            <li id="Basquete"><a href="Basquete.html">Basquete</a></li>
+            <li id="Volei"><a href="Volei.html">Volei</a></li>
+    </nav>
+
+     <main>
+
+<section id="origem">
+  <h2>Origem do Voleibol</h2>
+  <p>O voleibol foi criado nos Estados Unidos por William George Morgan, professor e diretor de Educação Física na Associação Cristã de Moços (ACM). Ele idealizou um jogo que fosse menos propenso a lesões e menos fisicamente exigente que o basquetebol, que estava na moda na época. Assim, em 1895, surgiu o voleibol, inicialmente chamado de "mintonette".</p>
+  <p>A escolha por um esporte com uma rede entre as equipes reduzia as chances de lesões, enquanto a praticidade de ser jogado em quadras fechadas o tornava ideal para o inverno rigoroso dos EUA.</p>
+</section>
+
+<section id="expansao">
+  <h2>Expansão do Voleibol</h2>
+  <p>O voleibol se espalhou rapidamente pelo mundo. Em 1910, chegou à América do Sul, sendo jogado primeiro no Peru e, em seguida, no Brasil em 1915. O vôlei de praia teve origem nas praias do Havaí por volta de 1920 e começou a ser praticado nas praias brasileiras na década de 1930.</p>
+  <p>Em 1947, foi fundada a Federação Internacional de Voleibol (FIVB), que atualmente conta com 163 países filiados e é responsável pela organização de torneios e desenvolvimento do esporte em todo o mundo.</p>
+</section>
+
+<section id="marcos">
+  <h2>Marcos Históricos</h2>
+  <p>O voleibol alcançou vários marcos ao longo de sua história. Em 1949, foi realizado o primeiro campeonato mundial de voleibol masculino, vencido pela Rússia. Em 1952, as mulheres disputaram pela primeira vez um campeonato mundial, com vitória da antiga União Soviética.</p>
+  <p>Em 1964, o voleibol foi incluído nos Jogos Olímpicos, sendo a Rússia o primeiro campeão olímpico no vôlei masculino. No Brasil, a primeira medalha olímpica no vôlei foi conquistada em 1984, seguida pela primeira medalha de ouro em 1992.</p>
+</section>
+
+<section id="evolucao">
+  <h2>Evolução do Voleibol</h2>
+  <p>Ao longo do tempo, o voleibol passou por diversas mudanças. A bola, inicialmente pesada, foi ajustada para ter tamanho e peso específicos. A quadra e a rede também passaram por alterações para se adequar às regras e padrões internacionais.</p>
+  <p>Novas técnicas e estratégias foram desenvolvidas, como o ataque de 3 metros, criado nas Olimpíadas de 1976. No Brasil, saques como o "Jornada nas Estrelas" e o "Viagem ao Fundo do Mar" tornaram-se parte da história do esporte.</p>
+</section>
+
+    </main>
+
+    <footer>
+        <p>Rodapé da página</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show-menu');
+        }
+    </script>
+</body>
+</html>
