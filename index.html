@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto do AndrielHC</title>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+
+    <style>
+
+
+    </style>
+
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+
+    <h2>Perfil</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/1373/1373255.png" itl="Minha imagem" width="150" height="150">
+    <h3>
+      <p>Nome: Felipe Andriel </p>
+      <p>Cidade: Lajeado-RS </p>
+      <p>Conrditato: Sua imaginação </p>
+    </h3>
+
+    <h2>Meus Projetos</h2>
+    <h2> 1-IMC </h2>
+    <img src="https://global.cdn.magazord.com.br/manalinda/img/2023/10/blog/4169/como-calcular-imc.jpg" width="300" height="300">
+    <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+
+    <p>O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+
+    <p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+
+
+    <p> </p>
+    <h5> Altura ex: 1,80 </h5>
+    <p></p>
+
+    <input type="text" id="alturapessoa">
+
+    <p> </p>
+    <h5> Peso ex: 80 </h5>
+
+    <input type="text" id="pesopessoa">
+
+
+    <br><br>
+
+    <button id="calcular" type="button"> Calcule </button>
+
+    <div id="resultado-imc"></div>
+
+    <p> </p>
+    <h2> VEJA A INTERPRETAÇÃO DO IMC </h2>
+    <p></p>
+    <img src="https://www.saudebemestar.pt/media/89347/obesidade.jpg" width="300" height="350">
+    <br><br>
+    <h4>
+      <li> IMC CLASSIFICAÇÕES </li>
+    </h4>
+
+    <br><br>
+    <li> MENOR QUE 18,5 MAGREZA 0 </li>
+
+    <br><br>
+    <li> ENTRE 18,5 E 24,9 NORMAL 0 </li>
+
+    <br><br>
+    <li> ENTRE 25,0 E 29,9 SOBREPESO I </li>
+
+    <br><br>
+    <li> ENTRE 30,0 E 39,9 OBESIDADE II </li>
+
+    <br><br>
+    <li> MAIOR QUE 40,0 OBESIDADE GRAVE III </li>
+
+    <h2>2 - calculadora Simples </h2>
+    <label for="calc-1"><small>Insira um número:</small></label>
+    <br>
+    <input id="c1" type="text" placeholder="Número">
+
+    <br>
+
+    <label for="calc-2"><small>Insira um número:</small></label>
+    <br>
+    <input id="c2" type="text" placeholder="Número">
+
+    <div>
+      <button id="btn-soma">+</button>
+      <button id="btn-subtracao">-</button>
+      <button id="btn-multiplicacao">x</button>
+      <button id="btn-divisao">/</button>
+    </div>
+
+    <label for="calc-3"><small>resultado:</small></label>
+    <br>
+    <input id="c3" type="text" placeholder="Número">
+
+    <h2>3 - Senha é Usuario </h2>
+    <h3>Faça o seu login: </h3>
+    <input id="User" type="text" placeholder="Usuario">
+
+    <br><br>
+
+    <input id="Key" type="text" placeholder="Senha">
+
+
+    <div>
+      <br>
+
+      <button id="botaologin">login</button>
+
+    </div>
+
+    <h2>4 - Digitação de texto </h2>
+
+    <h3>Mensagem</h3>
+
+    <textarea id="resumo" rows="4" cols="50"> </textarea>
+
+
+    <p id="qtde">Quantidade: </p>
+
+
+    <button onclick="limpar()"> Limpar</button>
+
+    <h2> 5-Numero da sorte </h2>
+
+    <p>para passar o tempo tente acertar o numero da sorte de hoje</p>
+
+    <label for="DS"><small>Insira um número:</small></label>
+    <input id="numeroDS" type="text" placeholder="Número">
+
+    <script>
+      //IMC(inicio)
+
+      let botao = document.getElementById('calcular')
+
+      botao.onclick = function() {
+
+        let altura = document.getElementById('alturapessoa')
+        let peso = document.getElementById('pesopessoa')
+        let imc = peso.value / (altura.value * altura.value)
+        let resultadoIMC = 'Seu IMC: ' + imc.toFixed(2);
+        document.getElementById('resultado-imc').innerHTML = '<p>' + resultadoIMC + '</p>';
+      }
+
+      //IMC(Final) 
+
+      //Calculadora(Inicio)
+      document.getElementById('btn-soma').onclick = function() {
+        let num1 = parseFloat(document.getElementById('c1').value);
+        let num2 = parseFloat(document.getElementById('c2').value);
+        let result = num1 + num2;
+        document.getElementById('c3').value = result;
+      };
+
+      document.getElementById('btn-subtracao').onclick = function() {
+        let num1 = parseFloat(document.getElementById('c1').value);
+        let num2 = parseFloat(document.getElementById('c2').value);
+        let result = num1 - num2;
+        document.getElementById('c3').value = result;
+      };
+
+      document.getElementById('btn-multiplicacao').onclick = function() {
+        let num1 = parseFloat(document.getElementById('c1').value);
+        let num2 = parseFloat(document.getElementById('c2').value);
+        let result = num1 * num2;
+        document.getElementById('c3').value = result;
+      };
+
+      document.getElementById('btn-divisao').onclick = function() {
+        let num1 = parseFloat(document.getElementById('c1').value);
+        let num2 = parseFloat(document.getElementById('c2').value);
+        let result = num1 / num2;
+        document.getElementById('c3').value = result;
+      };
+      //Calculadora(Final)
+
+      //Senha é Usuario(inicio)
+      document.getElementById('botaologin').onclick = function() {
+
+        let Usertrue = 'admin';
+        let keytrue = '12345';
+        let User = document.getElementById('User').value;
+        let Key = document.getElementById('Key').value;
+
+        if (User == Usertrue && Key == keytrue) {
+          alert('Acesso Liberado')
+        } else if (User != Usertrue && Key == keytrue) {
+          alert('Seu usuário está incorreto!')
+        } else if (User == Usertrue && Key != keytrue) {
+          alert('Sua senha está incorreta!')
+        } else if (User != Usertrue && Key != keytrue) {
+          alert('TUDO ESTÁ INCORRETO!')
+        }
+      };
+      //Senha é Usuario(final)
+
+      //Digitação de texto(inicio)
+      let qtde = document.getElementById('qtde');
+      let inputElement = document.getElementById('resumo');
+
+      inputElement.addEventListener('keyup', function(event) {
+        qtde.innerHTML = 'Quantidade: ' + inputElement.value.length
+      });
+
+      function limpar() {
+        inputElement.value = ''
+        qtde.innerHTML = 'Quantidade: '
+      }
+      //Digitação de texto(final)
+
+      //elemento adicional(inicio)
+
+
+
+      //elemento edicional(final)
+    </script>
+
+
+
+
+  </body>
+
+</html>
